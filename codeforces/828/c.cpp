@@ -31,7 +31,7 @@ int main() {
         cin >> n >> c >> s;
 
         if (c == 'g') {
-            cout << '0\n';
+            cout << "0\n";
         } else {
             vector<int> g, cv;
 
@@ -49,7 +49,7 @@ int main() {
             int ans = -1;
 
             for (int i = 0; i < cv.size(); i++) {
-                ans = max(ans, *upper_bound(g.begin(), g.end(), cv[i]));
+                ans = max(ans, *upper_bound(g.begin(), g.end(), cv[i]) - cv[i]);
             }
 
             cout << ans << '\n';
